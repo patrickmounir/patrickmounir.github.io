@@ -88,15 +88,30 @@
 <body>
 
 	<div>
-	<form method="get" action="index2.html">
+	<form method="get" action="https://www.google.com/search">
 		<h2><span class="g">G</span><span class="e">o</span><span class="o">o</span><span class="g">g</span><span class="l">l</span><span class="e">e</span></h2>
-		<h3></h3>
-	<br><br>
-	<input class="highlight" name ="name" type="text"></br>
+			<h3 class="name"></h3>
+	
+	<input class="highlight" name ="q" type="text"></br>
 	<button >Google Search</button>
 	<button >I'm Feeling Lucky</button></div>
 	</form>
 	<script>
+	function getQueryStrings() { 
+  var assoc  = {};
+  var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+  var queryString = location.search.substring(1); 
+  var keyValues = queryString.split('&'); 
+
+  for(var i in keyValues) { 
+    var key = keyValues[i].split('=');
+    if (key.length > 1) {
+      assoc[decode(key[0])] = decode(key[1]);
+    }
+  } 
+
+  return assoc; 
+} 
 	$(document).ready(function(){
 		$("button").mouseenter(function(event){
 			$(this).toggleClass("light");
@@ -104,6 +119,8 @@
            $("button").mouseleave(function(event){
 			$(this).toggleClass("light");
 	});
+		var name = getQueryStrings();
+		$(".name").html(name["name"])
 	});
 	</script>
 	</body>
