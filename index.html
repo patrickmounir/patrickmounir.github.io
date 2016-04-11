@@ -1,101 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
 	<title>Google</title>
 	<style>
 
 
-	body{
-		margin-top:300px;
-
-		text-align: center;
-	}
 	
-	h2{
-		color: red;
-        font-size:120px;
-        margin-bottom: 10px;
-        margin-top: 40px;
-        font-family: 'Poiret One', cursive;
-        font-weight: 1000;
-
-	}
-	h3{
-		font-family: 'Montserrat', sans-serif;
-		color:#4ea6e0;
-		font-weight:normal;
-		position:relative;
-		left: 150px;
-        top: -40px;
-	}
-	span{
-		width:5px;
-	}
-
-	.g{
-		color: #4ea6e0;
-	}
-	.e{
-		color:#d73645;
-	}
-	.o{
-		color: #f8b516;
-
-	}
-	.l{
-		color: #4ac84a;
-
-	}
-	button{
-		min-width:150px;
-		height:40px;
-		font-size:15px;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: bold;
-		border:0px solid white;
-		background-color: #efefef;
-		box-shadow: none;
-		color: #909090;
-
-	}
-	.light{
-		min-width:150px;
-		height:40px;
-		font-size:15px;
-		font-family: 'Montserrat', sans-serif;
-		font-weight:bold;
-		border: 0px solid black;
-		background-color: #cfcccc;
-		color:#2A2727;
-	}
-
-	.highlight {
-
-		width:700px;
-		height:50px;
-		font-size:30px;
-		background-color: #ffffff;
-        border: 0.5px solid #4ea6e0;
-        margin-bottom: 10px;
-
-	}
-		
 	</style>
 </head>
 <body>
-
+<script src="/js/jquery-2.2.0.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/ui-bootstrap-tpls-1.2.5.min.js"></script>
+    <script src="/controllers/mainCtrl.js"></script>
+    <script src="core.js"></script>
 	<div>
-	<form method="get" action="index2.html">
-		<h2><span class="g">G</span><span class="e">o</span><span class="o">o</span><span class="g">g</span><span class="l">l</span><span class="e">e</span></h2>
-		<h3></h3>
-	<br><br>
-	<input class="highlight" name ="name" type="text"></br>
-	<button >Google Search</button>
-	<button >I'm Feeling Lucky</button></div>
-	</form>
+	</div>
 	<script>
 	$(document).ready(function(){
 		$("button").mouseenter(function(event){
