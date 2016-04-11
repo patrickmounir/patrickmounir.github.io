@@ -1,20 +1,15 @@
 
 
-App.controller('mainCtrl', function($scope) {
+App.controller('mainCtrl', function($scope,Patrick,$location) {
     //$scope.pageClass = 'page-home';
 
-    $scope.f1="active";
-    $scope.f2="";
-    $scope.S1=function(){
-        $scope.f1="active";
-        $scope.f2="";
-
-    }
-    $scope.S2=function(){
-        $scope.f2="active";
-        $scope.f1="";
-
-    }
+    
+   $scope.goNxt=function(){
+    $location.url('/google');
+   }
+   $scope.over=function(){
+    this.
+   }
 });
 
 
