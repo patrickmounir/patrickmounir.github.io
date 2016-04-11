@@ -7,9 +7,7 @@ App.controller('mainCtrl', function($scope,Patrick,$location) {
    $scope.goNxt=function(){
     $location.url('/google');
    }
-   $scope.over=function(){
-    this.
-   }
+   
 });
 
 
