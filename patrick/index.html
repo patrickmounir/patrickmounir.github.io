@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Patrick</title>
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 <script src="semantic/dist/semantic.min.js"></script>
-	<title>Patrick</title>
-	<style>
-	
+  <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/transition.css">
+
+  <style type="text/css">
+
     .hidden.menu {
       display: none;
     }
@@ -95,39 +114,61 @@
         font-size: 1.5em;
       }
     }
-	</style>
-	<script src="../dist/components/visibility.js"></script>
-  <script src="../dist/components/sidebar.js"></script>
-  <script src="../dist/components/transition.js"></script>
-</head>
-<body>
-<script src="semantic/dist/components/visibility.js"></script>
+
+
+  </style>
+<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
+  <!-- <script src="assets/library/jquery.min.js"></script> -->
+  <script src="semantic/dist/components/visibility.js"></script>
   <script src="semantic/dist/components/sidebar.js"></script>
   <script src="semantic/dist/components/transition.js"></script>
-    <div class="ui large top fixed hidden menu">
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
   <div class="ui container">
-    <a class="active item">Home</a>
-    <a class="item">Work</a>
-    <a class="item">Company</a>
-    <a class="item">Careers</a>
-    <div class="right menu">
-      <div class="item">
-        <a class="ui button">Log in</a>
-      </div>
-      <div class="item">
-        <a class="ui primary button">Sign Up</a>
-      </div>
-    </div>
+    <a class="active item" href="http://patrickmounir.github.io/patrick/">Home</a>
+    <a class="item" href="http://patrickmounir.github.io/">Google</a>
+    <a class="item" href="http://met.guc.edu.eg">GUC</a>
+    <a class="item" href="resume.pdf">Resume</a>
+    
   </div>
 </div>
-	<!-- Sidebar Menu -->
+
+<!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-  <a class="active item">Home</a>
-  <a class="item">Work</a>
-  <a class="item">Company</a>
-  <a class="item">Careers</a>
-  <a class="item">Login</a>
-  <a class="item">Signup</a>
+ <a class="active item" href="http://patrickmounir.github.io/patrick/">Home</a>
+    <a class="item" href="http://patrickmounir.github.io/">Google</a>
+    <a class="item" href="http://met.guc.edu.eg">GUC</a>
+    <a class="item" href="resume.pdf">Resume</a>
+ 
 </div>
 
 
@@ -140,23 +181,19 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">Home</a>
-        <a class="item">Work</a>
-        <a class="item">Company</a>
-        <a class="item">Careers</a>
-        <div class="right item">
-          <a class="ui inverted button">Log in</a>
-          <a class="ui inverted button">Sign Up</a>
-        </div>
+       <a class="active item" href="http://patrickmounir.github.io/patrick/">Home</a>
+    <a class="item" href="http://patrickmounir.github.io/">Google</a>
+    <a class="item" href="http://met.guc.edu.eg">GUC</a>
+    <a class="item" href="resume.pdf">Resume</a>
+       
       </div>
     </div>
 
     <div class="ui text container">
       <h1 class="ui inverted header">
-        Imagine-a-Company
-      </h1>
-      <h2>Do whatever you want when you want to.</h2>
-      <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+        Patrick Mounir Naeem Attia</h1>
+      <h2>CS Student at the GUC</h2>
+     
     </div>
 
   </div>
@@ -244,30 +281,7 @@
     </div>
   </div>
 </div>
-	<script>
-	$(document)
-    .ready(function() {
 
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
-      ;
+</body>
 
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
-	</script>
-	</body>
-		</html>
+</html>
