@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<title>Patrick</title>
+	<style>
+	body{
+		margin-top:300px;
+		text-align: center;
+	}
+	
+	h2{
+		color: red;
+        font-size:120px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+        font-family: 'Poiret One', cursive;
+        font-weight: 1000;
+	}
+	h3{
+		font-family: 'Montserrat', sans-serif;
+		color:#4ea6e0;
+		font-weight:normal;
+		position:relative;
+		left: 150px;
+        top: -40px;
+	}
+	span{
+		width:5px;
+	}
+	.g{
+		color: #4ea6e0;
+	}
+	.e{
+		color:#d73645;
+	}
+	.o{
+		color: #f8b516;
+	}
+	.l{
+		color: #4ac84a;
+	}
+	button{
+		min-width:150px;
+		height:40px;
+		font-size:15px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		border:0px solid white;
+		background-color: #efefef;
+		box-shadow: none;
+		color: #909090;
+	}
+	.light{
+		min-width:150px;
+		height:40px;
+		font-size:15px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight:bold;
+		border: 0px solid black;
+		background-color: #cfcccc;
+		color:#2A2727;
+	}
+	.highlight {
+		width:700px;
+		height:50px;
+		font-size:30px;
+		background-color: #ffffff;
+        border: 0.5px solid #4ea6e0;
+        margin-bottom: 10px;
+	}
+		
+	</style>
+</head>
+<body>
+
+	<div>
+	
+		<h2><span class="g">Patrick</span></h2>
+		<h3>This is a test</h3>
+	<br><br>
+	
+	
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div class="brand text-center" img="img/emblemmatic-patrick-logo-17.png">&copy;Patrick</div>
+  </div>
+</nav>
+	<script>
+	$(document).ready(function(){
+		$("button").mouseenter(function(event){
+			$(this).toggleClass("light");
+		});
+           $("button").mouseleave(function(event){
+			$(this).toggleClass("light");
+	});
+	});
+	</script>
+	</body>
+		</html>
